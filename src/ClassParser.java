@@ -26,13 +26,6 @@ public class ClassParser {
         for (JavaField field : aClass.getFields()) {
             parameters.add(new NamedTypes(field.getName(),field.getType().getName()));
         }
-        List<JavaMethod> methods = aClass.getMethods();
-        for (JavaMethod method : methods) {
-            System.out.println(method.getCodeBlock());
-        }
-
-
-
         return new JavaClassRepresentation(aClass.getName(),parameters,aClass);
     }
 }

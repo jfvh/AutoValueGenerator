@@ -1,4 +1,5 @@
 import model.JavaClassRepresentation;
+import model.Keywords;
 import model.NamedTypes;
 
 import java.io.IOException;
@@ -12,8 +13,7 @@ public class Generator {
 
 
         JavaClassRepresentation javaClassRepresentation = ClassParser.getJavaClassRepresentation(codeInput);
-        //remove last }, so the functions are kept inside the class
-        //todo check if necessary
+        //remove last }, so the functions are kept inside the class todo: check if necessary
         int indexOfBracket = codeInput.lastIndexOf('}');
         StringBuilder sb = new StringBuilder(codeInput);
         codeInput = sb.deleteCharAt(indexOfBracket).toString();
@@ -36,7 +36,7 @@ public class Generator {
                 templine = "@AutoValue \npublic abstract " + templine;
             }
             for (NamedTypes namedTypes : javaClassRepresentation.getParameterList()) {
-                if (templine.contains(namedTypes.toString())) { //todo check ignore spaces
+                if (templine.contains(namedTypes.toString())) { //todo: implement  ignore spaces
                     templine = "public abstract " + namedTypes.toString() + "(); \n";
                     lastParamLineNumber = i;
                 }

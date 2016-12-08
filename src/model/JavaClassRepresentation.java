@@ -16,7 +16,7 @@ public class JavaClassRepresentation {
     public JavaClassRepresentation(String className, List<NamedTypes> parameterList, JavaClass qdoxJavaObject) {
         this.className = className;
         this.parameterList = parameterList;
-        this.qdoxJavaObject = qdoxJavaObject;
+        this.qdoxJavaObject = qdoxJavaObject; //todo not used, can be phased out maybe later
     }
 
     public String getClassName() {

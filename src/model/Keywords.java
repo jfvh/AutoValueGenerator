@@ -1,5 +1,8 @@
+package model;
+
 /**
- * Created by jvanheijst on 12/6/16.
+ *has all java keywords.
+ * Some are commented, as those keywords cannot be removed
  */
 public class Keywords {
     
