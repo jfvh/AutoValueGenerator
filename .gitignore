@@ -3,8 +3,11 @@
 # Mobile Tools for Java (J2ME)
 .mtj.tmp/
 
+#intellij files
+.idea
+
 # Package Files #
-*.jar
+# *.jar need some jar files, libraries imported as jar
 *.war
 *.ear
 
